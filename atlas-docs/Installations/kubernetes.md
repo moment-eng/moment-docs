@@ -4,10 +4,10 @@ This guide will install Atlas onto your Kubernetes cluster.
 
 All configuration for this project will be configured in the `atlas` namespace.
 
-All files needed to install Atlas are in the `kubernetes` directory in the root of this repository.
+All files needed to install Atlas are in the `kubernetes` directory in the [moment-docs repo](../kubernetes).
 
 We will use [Kustomize](https://github.com/kubernetes-sigs/kustomize) for the install.
-(Kubernetes also ships with a Kustomize distribution—if `kustomize` is not in your environment, use `kubectl kustomize`)
+(Kubernetes also ships with a Kustomize distribution—if `kustomize` is not in your environment, use `kubectl kustomize`).
 
 ```
 install
