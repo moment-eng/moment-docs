@@ -1,0 +1,30 @@
+apiVersion: moment.dev/atlas/v1alpha1
+kind: Atlas
+metadata:
+  name: gcp-dev
+spec:
+  exposedPorts: {}
+  gatewayRegistration:
+    backoff:
+      factor: 2
+      jitter: true
+      maxInterval: 120
+      minInterval: 2
+    connectionRetries: 15
+    connectionTimeout: 15
+    registrationHostpath: dns:atlas.moment.dev:443
+  identityProviders:
+    auth0:
+      audience: http://www.moment.dev/api
+      issuer: https://moment-eng.auth0.com/
+      publicKey: https://moment-eng.auth0.com/.well-known/jwks.json
+  apiAdapters:
+    - adapterRef:
+        kind: Kubernetes
+        apiVersion: moment.dev/adapters/v1alpha1
+        name: kubernetes
+---
+kind: Kubernetes
+apiVersion: moment.dev/adapters/v1alpha1
+metadata:
+  name: kubernetes

@@ -1,0 +1,3 @@
+name: atlas-ecs-follower
+runtime: nodejs
+description: Sandbox for testing atlas ecs with pulumi

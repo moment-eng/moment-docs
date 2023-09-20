@@ -1,0 +1,8 @@
+namespace: atlas
+
+resources:
+  - namespace.yml
+  - service_account.yml
+  - cluster_role.yml
+  - cluster_role_binding.yml
+  - deployment.yml

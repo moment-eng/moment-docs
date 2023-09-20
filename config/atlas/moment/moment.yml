@@ -1,0 +1,99 @@
+kind: Atlas
+apiVersion: moment.dev/atlas/v1alpha1
+metadata:
+  name: moment-ecs-follower-staging
+spec:
+  identityProviders:
+    - auth0:
+        publicKey: "https://moment-eng.auth0.com/.well-known/jwks.json"
+        audience: "http://www.moment.dev/api"
+        issuer: "https://www.moment.dev/"
+    - auth0:
+        publicKey: "https://auth.moment.dev/.well-known/jwks.json"
+        audience: "http://www.moment.dev/api"
+        issuer: "https://auth.moment.dev/"
+  exposedPorts:
+    ingressHttpPort: 8082 # unused
+    adminPort: 9000 # unused
+  gatewayRegistration:
+    registrationHostpath: 127.0.0.1:8001 # This is the envoy egress port
+    insecure: true
+    connectionTimeout: 15
+    backoff:
+      minInterval: 2
+      maxInterval: 120 # 2 minutes
+      factor: 2
+      jitter: true
+  apiAdapters:
+    - adapterRef:
+        kind: Moment
+        apiVersion: moment.dev/adapters/v1alpha1
+        name: moment
+    - adapterRef:
+        kind: HTTP
+        apiVersion: moment.dev/adapters/v1alpha1
+        name: github
+    - adapterRef:
+        kind: HTTP
+        apiVersion: moment.dev/adapters/v1alpha1
+        name: pagerduty
+    - adapterRef:
+        kind: HTTP
+        apiVersion: moment.dev/adapters/v1alpha1
+        name: datadog
+    - adapterRef:
+        kind: HTTP
+        apiVersion: moment.dev/adapters/v1alpha1
+        name: vercel
+---
+kind: Moment
+apiVersion: moment.dev/adapters/v1alpha1
+metadata:
+  name: moment
+spec:
+  catalog:
+    github:
+      baseUrl: https://api.github.com
+      accessToken: "${{ GITHUB_TOKEN }}"
+---
+kind: HTTP
+apiVersion: moment.dev/adapters/v1alpha1
+metadata:
+  name: github
+spec:
+  baseUrl: https://api.github.com
+  headers:
+    - name: Authorization
+      value: "token ${{ GITHUB_TOKEN }}"
+---
+kind: HTTP
+apiVersion: moment.dev/adapters/v1alpha1
+metadata:
+  name: pagerduty
+spec:
+  baseUrl: https://api.pagerduty.com
+  headers:
+    - name: Authorization
+      value: "Token token=${{ PAGERDUTY_ACCOUNT_TOKEN }}"
+---
+kind: HTTP
+apiVersion: moment.dev/adapters/v1alpha1
+metadata:
+  name: datadog
+spec:
+  baseUrl: https://api.datadoghq.com/api
+  headers:
+    - name: DD-API-KEY
+      value: "${{ DATADOG_API_KEY }}"
+    - name: DD-APPLICATION-KEY
+      value: "${{ DATADOG_APPLICATION_KEY }}"
+---
+kind: HTTP
+apiVersion: moment.dev/adapters/v1alpha1
+metadata:
+  name: vercel
+spec:
+  baseUrl: https://api.vercel.com
+  headers:
+    - name: Authorization
+      value: "Bearer ${{ VERCEL_ADMIN_KEY }}"

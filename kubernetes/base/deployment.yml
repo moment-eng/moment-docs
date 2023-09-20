@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atlas
+  namespace: atlas
+  labels:
+    app: atlas
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atlas
+  template:
+    metadata:
+      labels:
+        app: atlas
+    spec:
+      serviceAccountName: atlas-sa
+      containers:
+        - name: atlas
+          image: public.ecr.aws/v1x9l6h9/atlas:alpha
+          imagePullPolicy: Always
+          volumeMounts:
+            - readOnly: true
+              mountPath: /config
+              name: atlas-config
+          command:
+            - "./atlas"
+          args:
+            - "--follower-config"
+            - "/config/atlas.yml"
+            - "--log-level"
+            - "prod"
+          env:
+            - name: "GITHUB_TOKEN"
+              valueFrom:
+                secretKeyRef:
+                  name: atlas-integration-tokens
+                  key: "GITHUB_TOKEN"
+            - name: "PAGERDUTY_ACCOUNT_TOKEN"
+              valueFrom:
+                secretKeyRef:
+                  name: atlas-integration-tokens
+                  key: "PAGERDUTY_ACCOUNT_TOKEN"
+          securityContext:
+            runAsUser: 1000
+            readOnlyRootFilesystem: true
+          ports:
+            - containerPort: 8082
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+        - name: envoy
+          image: envoyproxy/envoy:v1.21.2
+          volumeMounts:
+            - readOnly: true
+              mountPath: /config
+              name: envoy-config
+          command:
+            - "envoy"
+          args:
+            - "--config-path"
+            - "/config/envoy.yml"
+          securityContext:
+            runAsUser: 1000
+            readOnlyRootFilesystem: true
+          ports:
+            - containerPort: 9901
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+      volumes:
+        - name: envoy-config
+          configMap:
+            name: envoy-config
+        - name: atlas-config
+          configMap:
+            name: atlas-config

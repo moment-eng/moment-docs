@@ -1,0 +1,13 @@
+{
+    "name": "atlas-ecs-follower",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18.11.18"
+    },
+    "dependencies": {
+        "@pulumi/aws": "^5.28.0",
+        "@pulumi/awsx": "^1.0.1",
+        "@pulumi/command": "^0.7.0",
+        "@pulumi/pulumi": "^3.53.1"
+    }
+}

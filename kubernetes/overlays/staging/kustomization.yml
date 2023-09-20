@@ -1,0 +1,17 @@
+namespace: atlas
+
+resources:
+  - ../../base
+
+configMapGenerator:
+  - name: atlas-config
+    files:
+      - atlas.yml
+  - name: envoy-config
+    files:
+      - envoy.yml
+
+secretGenerator:
+  - name: atlas-integration-tokens
+    envs:
+      - .env.atlas-integration-tokens

@@ -1,0 +1,5 @@
+config:
+  aws:region: "us-west-2"
+  tokens:
+    "GITHUB_TOKEN": ""
+    "PAGERDUTY_ACCOUNT_TOKEN": ""
