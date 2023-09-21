@@ -12,7 +12,7 @@ In order to set up Atlas quickly:
 1. Install Docker Desktop ([Mac](https://docs.docker.com/desktop/install/mac-install/), [Windows](https://docs.docker.com/desktop/install/windows-install/), [Linux](https://docs.docker.com/desktop/install/linux-install/)).
    Make sure Docker Desktop is running.
 1. Install [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-1. Clone this repository.
+1. Clone [this repository](https://github.com/moment-eng/moment-docs/tree/main).
 
 ## Configuration
 

@@ -50,7 +50,7 @@ If you have not done this already, use the **Provision a GitHub Personal Access 
 
 ## Step 3: Configure Atlas to proxy traffic to the GitHub API
 
-Now that we have a GitHub Personal Access Token, we can configure Atlas to proxy traffic to the GitHub API using `mom atlas config add-http-adapter`:
+Now that we have a GitHub Personal Access Token, configure Atlas to proxy traffic to the GitHub API using `mom atlas config add-http-adapter`:
 
 ```sh
 # -f:             The Atlas config file to modify.
@@ -84,16 +84,7 @@ We can verify this by running `mom curl`:
 mom curl /v1/apis/http/github/user
 ```
 
-## Step 5: Install Atlas in your cloud environment
-
-Once we verify this proxy works, we need to install it in your cloud environment.
-Atlas has [installation guides][install-guides] for several types of cloud deployment.
-Notably:
-
--   [Kubernetes via Kustomize][install-guides-kube-kustomize].
--   [ECS via Pulumi][install-guides-ecs-pulumi].
-
-## Step 6: Check that Atlas is running and accessible
+## Step 5: Check that Atlas is running and accessible
 
 Check that your Atlas instance is running using `mom atlas instances list`.
 
@@ -121,6 +112,15 @@ $ mom atlas apis list -u https://atlas.moment.dev
  KIND    NAME    INSTANCE NAME        INSTANCE UID
  Moment  moment  moment-ecs-follower  070e9fcc-ffcb-4ced-b118-6731b67a0a4b
 ```
+
+## Step 6: Install Atlas in your cloud environment
+
+Once we verify this proxy works locally, we need to install it in your cloud environment.
+Atlas has [installation guides][install-guides] for several types of cloud deployment.
+Notably:
+
+-   [Kubernetes via Kustomize][install-guides-kube-kustomize].
+-   [ECS via Pulumi][install-guides-ecs-pulumi].
 
 ## Step 7: Develop Your Custom Tools and Dashboards
 

@@ -30,16 +30,16 @@ To quickly and securely allow access to your internal resources!
 - Expose infrastructure commands, like deployment and rollback, to your developers without granting wide access to your infrastructure.
 - Use the built-in integration with [Moment](https://www.moment.dev/) to build interactive docs and runbooks.
 
-## [Getting Started](./atlas-docs/getting-started.md)
+## [Getting Started](./getting-started.md)
 
 There are multiple options for installing Atlas. We've provided scripts to get Atlas up and running quickly in different environments:
 
-- [Adding Atlas to Your Kubernetes Cloud](./atlas-docs/Installations/kubernetes.md)
-- [Setting up ECS via Pulumi](./atlas-docs/Installations/ecs.md)
+- [Adding Atlas to Your Kubernetes Cloud](./Installations/kubernetes.md)
+- [Setting up ECS via Pulumi](./Installations/ecs.md)
 
 ## Integrations
 
-- [Connecting to Kubernetes (alpha)](./atlas-docs/integrations/kubernetes.md)
-- [Connecting to HTTP and REST APIs (alpha)](./atlas-docs/integrations/http-and-rest-apis.md)
-- [Connecting to AWS (alpha)](./atlas-docs/integrations/aws.md)
-- [Setting up Moment's Service Catalog (alpha)](./atlas-docs/integrations/moment.md)
+- [Connecting to Kubernetes (alpha)](./integrations/kubernetes.md)
+- [Connecting to HTTP and REST APIs (alpha)](./integrations/http-and-rest-apis.md)
+- [Connecting to AWS (alpha)](./integrations/aws.md)
+- [Setting up Moment's Service Catalog (alpha)](./integrations/moment.md)
