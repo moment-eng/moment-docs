@@ -94,6 +94,4 @@ const res = await atlasProxyFetch("/v1alpha1/instances");
 return res.json();
 ```
 
-![test-code-cell](/atlas-docs/images/add-code-cell.mov)
-
 [integrations]: /atlas-docs/integrations
