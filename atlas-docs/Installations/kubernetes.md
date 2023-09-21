@@ -4,10 +4,10 @@ This guide will install Atlas onto your Kubernetes cluster.
 
 All configuration for this project will be configured in the `atlas` namespace.
 
-All files needed to install Atlas are in the `kubernetes` directory in the root of this repository.
+All files needed to install Atlas are in the `kubernetes` directory in the [moment-docs repo](https://github.com/moment-eng/moment-docs/tree/main/kubernetes).
 
 We will use [Kustomize](https://github.com/kubernetes-sigs/kustomize) for the install.
-(Kubernetes also ships with a Kustomize distribution—if `kustomize` is not in your environment, use `kubectl kustomize`)
+(Kubernetes also ships with a Kustomize distribution—if `kustomize` is not in your environment, use `kubectl kustomize`.)
 
 ```
 install
@@ -83,5 +83,17 @@ If you want a more granular permission set, modify `cluster_role.yml` with the d
 Check that the pod is running with `kubectl get po -n atlas`.
 
 Once connected, refer to the [API docs][integrations] for how to use Atlas.
+
+## Verifying that Atlas is installed from Moment
+
+Once Atlas is installed and you've verified that the ECS service is healthy from the AWS console, check that it's working with Moment by adding a `code cell` with the following code:
+
+```
+const res = await atlasProxyFetch("/v1alpha1/instances");
+
+return res.json();
+```
+
+![test-code-cell](/atlas-docs/images/add-code-cell.mov)
 
 [integrations]: /atlas-docs/integrations
