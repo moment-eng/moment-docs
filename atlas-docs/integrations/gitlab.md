@@ -38,15 +38,15 @@ Having a dedicated GitLab account for this purpose has several advantages over t
 
 Follow the appropriate directions under [GitLab Token Overview][gitlab-token-overview].
 
-## Add GitHub Integration to Atlas
+## Add GitLab Integration to Atlas
 
 Once the Personal Access Token is provisioned, we will need to make it available to your running Atlas instance.
 We will do this by:
 
-1. Adding the GitHub Personal Access Token to the Atlas configuration as an environment variable, _e.g._, `GITHUB_TOKEN`.
+1. Adding the GitLab Personal Access Token to the Atlas configuration as an environment variable, _e.g._, `GITLAB_TOKEN`.
 1. Configuring the Atlas deployment to use an [HTTP adapter][http-adapter] that adds the Personal Access Token to the `Authorization` header.
 
-### Step 1: Add GitHub Personal Access Token to Atlas Deployment as an Environment Variable
+### Step 1: Add GitLab Personal Access Token to Atlas Deployment as an Environment Variable
 
 -   **Choose an environment variable name for the GitLab Personal Access Token.** Generally this is something like `GITLAB_TOKEN`.
 -   **Add the GitLab Personal Access Token you provisioned as an environment variables to your Atlas deployment.**
