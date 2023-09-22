@@ -3,6 +3,7 @@ apiVersion: moment.dev/atlas/v1alpha1
 metadata:
   name: moment-ecs-follower-staging
 spec:
+  owner: moment.dev
   identityProviders:
     - auth0:
         publicKey: "https://moment-eng.auth0.com/.well-known/jwks.json"

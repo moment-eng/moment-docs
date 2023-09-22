@@ -3,6 +3,7 @@ apiVersion: moment.dev/atlas/v1alpha1
 metadata:
   name: atlas-follower
 spec:
+  owner: <REPLACE-WITH-YOUR-ORGANIZATION-DOMAIN, ex, moment.dev>
   identityProviders:
     - auth0:
         publicKey: "https://moment-eng.auth0.com/.well-known/jwks.json"
