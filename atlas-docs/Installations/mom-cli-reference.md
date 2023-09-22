@@ -43,6 +43,7 @@ Initially this configuration will do nothing, but we will add to it later.
 ```sh
 mom atlas config generate \
     --name my-atlas \       # This can be anything, but should be unique to your organization.
+    --owner example.com \   # Your organization's domain.
     --preset production \   # Configures Atlas to connect to gateway at `atlas.moment.dev`.
     > atlas.yml
 ```
