@@ -8,6 +8,7 @@ The following integrations are currently supported:
 -   [Brex](brex.md)
 -   [Datadog](datadog.md)
 -   [GitHub](github.md)
+-   [GitLab](gitlab.md)
 -   [Greenhouse Harvest API](greenhouse-harvest-api.md)
 -   [Heroku](heroku.md)
 -   [HTTP and REST APIs](http-and-rest-apis.md)
