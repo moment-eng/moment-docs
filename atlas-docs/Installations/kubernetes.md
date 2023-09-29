@@ -27,6 +27,7 @@ install
 ```
 
 We reference a `staging` cluster here.
+Make sure to copy the atlas.yml you generated locally (in [Getting Started](/atlas-docs/getting-started.md)) to `kubernetes/overlays/staging/atlas.yml`.
 If your environment uses a different name, rename the `kubernetes/overlays/staging` directory to use your environment name.
 
 ## Kustomize configuration
