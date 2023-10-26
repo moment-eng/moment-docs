@@ -32,11 +32,9 @@ Initially this configuration will do nothing, but we will add to it later.
 
 ```sh
 # --name:  Any human-readable name, unique to your organization.
-# --owner: Your organization's domain.
 # --preset production: Configures Atlas to connect to gateway at `atlas.moment.dev`.
 mom atlas config generate \
     --name my-atlas \
-    --owner example.com \
     --preset production \
     > atlas.yml
 ```

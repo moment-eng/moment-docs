@@ -7,13 +7,13 @@ This document covers the basics of using this CLI: installing, configuring, and 
 
 To install `mom`:
 
-1. Download the architecure-specific binary for your operating system using `curl`. For example, `curl https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-darwin-arm64 --output mom` or on Windows `curl https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-windows-amd64 --output mom.exe`. The latest release of `mom` CLI is `v0.3.41`.
-    -   [Darwin AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-darwin-amd64)
-    -   [Darwin ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-darwin-arm64)
-    -   [Linux AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-linux-amd64)
-    -   [Linux ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-linux-arm64)
-    -   [Windows AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-windows-amd64)
-    -   [Windows ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-windows-arm64)
+1. Download the architecure-specific binary for your operating system using `curl`. For example, `curl https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.61/mom-darwin-arm64 --output mom` or on Windows `curl https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.61/mom-windows-amd64 --output mom.exe`. The latest release of `mom` CLI is `v0.3.61`.
+    -   [Darwin AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.61/mom-darwin-amd64)
+    -   [Darwin ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.61/mom-darwin-arm64)
+    -   [Linux AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.61/mom-linux-amd64)
+    -   [Linux ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.61/mom-linux-arm64)
+    -   [Windows AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.61/mom-windows-amd64)
+    -   [Windows ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.61/mom-windows-arm64)
 1. Move the `mom` binary to a location on your `PATH`. For example, if your `mom` binary is currently in your Downloads directory, on macOS you would do `sudo mv ~/Downloads/mom /usr/local/bin`.
 1. Make sure the binary is executable using. On macOS this would be `chmod +x /usr/local/bin/mom`.
 1. Check that you get help text by typing `mom`.
@@ -43,7 +43,6 @@ Initially this configuration will do nothing, but we will add to it later.
 ```sh
 mom atlas config generate \
     --name my-atlas \       # This can be anything, but should be unique to your organization.
-    --owner example.com \   # Your organization's domain.
     --preset production \   # Configures Atlas to connect to gateway at `atlas.moment.dev`.
     > atlas.yml
 ```
