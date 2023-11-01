@@ -34,14 +34,6 @@ If your environment uses a different name, rename the `kubernetes/overlays/stagi
 
 These files are used to define Atlas and Envoy configurations.
 
-### Required configuration
-
-Open the Atlas configuration file in `kubernetes/overlays/staging/atlas.yml` and modify the following values:
-
-- `.spec.owner`: Set this to your organization's domain identifier. If you log into Moment with
-  Google SSO this will be a domain like `example.com`. This will be used by the Moment server to
-  determine the organization that is trying to register.
-
 ### Optional configuration
 
 #### Adding integrations for third-party APIs
@@ -70,7 +62,7 @@ The docs in `atlas-docs/integrations` contain detailed instructions for using di
 
 ## Install
 
-Apply the configuration onto your Kubernetes cluster in the `atlas` namespace by running [Kustomize](https://kubectl.docs.kubernetes.io/installation/kustomize/)
+Apply the configuration onto your Kubernetes cluster in the `atlas` namespace by running [Kustomize](https://kubectl.docs.kubernetes.io/installation/kustomize/).
 
 ```
 kustomize build ./kubernetes/overlays/staging | kubectl apply -f -

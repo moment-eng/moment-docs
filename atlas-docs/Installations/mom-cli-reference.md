@@ -1,19 +1,21 @@
 # `mom` Atlas CLI tooling
 
-Moment’s official CLI `mom` has built-in amenities for interacting with Atlas.
+Atlas's recommended setup and configuration is located in [Atlas Config settings](https://app.moment.dev/settings/atlas).
+Moment’s official CLI `mom` has built-in amenities for interacting with Atlas, but it's in the process of being deprecated in favor of the [Atlas configuration](https://app.moment.dev/settings/atlas) in the app.
+
 This document covers the basics of using this CLI: installing, configuring, and using it to interact with Atlas.
 
 ## Prerequisite: mom CLI Installation
 
 To install `mom`:
 
-1. Download the architecure-specific binary for your operating system using `curl`. For example, `curl https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-darwin-arm64 --output mom` or on Windows `curl https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-windows-amd64 --output mom.exe`. The latest release of `mom` CLI is `v0.3.41`.
-    -   [Darwin AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-darwin-amd64)
-    -   [Darwin ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-darwin-arm64)
-    -   [Linux AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-linux-amd64)
-    -   [Linux ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-linux-arm64)
-    -   [Windows AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-windows-amd64)
-    -   [Windows ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.41/mom-windows-arm64)
+1. Download the architecure-specific binary for your operating system using `curl`. For example, `curl https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.64/mom-darwin-arm64 --output mom` or on Windows `curl https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.64/mom-windows-amd64 --output mom.exe`. The latest release of `mom` CLI is `v0.3.64`.
+    -   [Darwin AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.64/mom-darwin-amd64)
+    -   [Darwin ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.64/mom-darwin-arm64)
+    -   [Linux AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.64/mom-linux-amd64)
+    -   [Linux ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.64/mom-linux-arm64)
+    -   [Windows AMD64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.64/mom-windows-amd64)
+    -   [Windows ARM64](https://mom-cli-releases.s3.us-west-2.amazonaws.com/v0.3.64/mom-windows-arm64)
 1. Move the `mom` binary to a location on your `PATH`. For example, if your `mom` binary is currently in your Downloads directory, on macOS you would do `sudo mv ~/Downloads/mom /usr/local/bin`.
 1. Make sure the binary is executable using. On macOS this would be `chmod +x /usr/local/bin/mom`.
 1. Check that you get help text by typing `mom`.
@@ -35,20 +37,9 @@ This will open a browser window where you can log in to the Moment service.
 
 ## Configuring Atlas
 
-### Generating basic config with `mom atlas config generate`
+### Adding HTTP API integration
 
-We can use `mom atlas config generate` to generate a simple, initial configuration of Atlas.
-Initially this configuration will do nothing, but we will add to it later.
-
-```sh
-mom atlas config generate \
-    --name my-atlas \       # This can be anything, but should be unique to your organization.
-    --owner example.com \   # Your organization's domain.
-    --preset production \   # Configures Atlas to connect to gateway at `atlas.moment.dev`.
-    > atlas.yml
-```
-
-### Adding HTTP API integration with `mom atlas config add-http-adapter`
+**Generate [Atlas configuration](https://app.moment.dev/settings/atlas) in the app instead of using mom**
 
 Atlas provides [integrations][integrations] for several popular HTTP APIs.
 Integrating Atlas with those APIs generally requires provisioning API credentials, configuring Atlas to use them, and then deploying Atlas, _e.g._, to ECS or Kubernetes.
