@@ -35,39 +35,39 @@ Together, these two things determine what actions the Application key is authori
 1.  Click your profile picture on the lower left-hand side of the Datadog UI.
     Choose the **Organization settings** button in the popover menu.
 
-    ![organization-settings](/atlas-docs/images/ddog-profile-hover.png)
+    ![organization-settings](/docs/atlas-docs/images/ddog-profile-hover.png)
 
 1.  On the left-hand side of the Organization settings page, click the **API Keys** tab.
 
-    ![api-keys-tab](/atlas-docs/images/ddog-settings-api-keys.png)
+    ![api-keys-tab](/docs/atlas-docs/images/ddog-settings-api-keys.png)
 
 1.  In the upper right-hand side of the API Keys page, click the **New Key** button.
 
-    ![new-key](/atlas-docs/images/ddog-new-api-key.png)
+    ![new-key](/docs/atlas-docs/images/ddog-new-api-key.png)
 
 1.  Provide a name for the Datadog API key, and click **Create Key**.
 
-    ![api-keys-tab](/atlas-docs/images/ddog-create-key.png)
+    ![api-keys-tab](/docs/atlas-docs/images/ddog-create-key.png)
 
 1.  Click the **Copy** button to copy the API key to your clipboard.
     Store this API key in a secure location, as you will need it for the next step.
     When you are done, click the **Finish** button.
 
-    ![api-keys-tab](/atlas-docs/images/ddog-finish-key.png)
+    ![api-keys-tab](/docs/atlas-docs/images/ddog-finish-key.png)
 
 ## Provisioning a Datadog Application key
 
 1. From the Settings page, click the **Application Keys** tab.
 
-    ![application-keys-tab](/atlas-docs/images/ddog-settings-app-keys.png)
+    ![application-keys-tab](/docs/atlas-docs/images/ddog-settings-app-keys.png)
 
 1. Click the **New Key** button.
 
-    ![new-app-key](/atlas-docs/images/ddog-new-app-key.png)
+    ![new-app-key](/docs/atlas-docs/images/ddog-new-app-key.png)
 
 1. Provide a name for the Datadog Application key, and click **Create Key**.
 
-    ![create-app-key](/atlas-docs/images/ddog-create-app-key.png)
+    ![create-app-key](/docs/atlas-docs/images/ddog-create-app-key.png)
 
 1. Click the **Copy** button to copy the Application key to your clipboard.
    Store this Application key in a secure location, as you will need it for the next step.
@@ -77,7 +77,7 @@ Together, these two things determine what actions the Application key is authori
 
     When you are done, click the **Finish** button.
 
-    ![finish-app-key](/atlas-docs/images/ddog-finish-app-key.png)
+    ![finish-app-key](/docs/atlas-docs/images/ddog-finish-app-key.png)
 
 ## Add Datadog Integration to Atlas
 
@@ -185,6 +185,6 @@ If the integration is working, you should see a JSON object with a list of Datad
 [api-keys]: https://docs.datadoghq.com/account_management/api-app-keys/
 [api-key-docs]: https://docs.datadoghq.com/account_management/api-app-keys/#api-keys
 [app-key-docs]: https://docs.datadoghq.com/account_management/api-app-keys/#application-keys
-[http-adapter]: /atlas-docs/integrations/http-and-rest-apis.md
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[http-adapter]: /docs/atlas-docs/integrations/http-and-rest-apis.md
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/

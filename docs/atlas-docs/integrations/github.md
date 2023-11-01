@@ -40,20 +40,20 @@ Having a dedicated GitHub account for this purpose has several advantages over t
 1. Click your profile picture in the upper right-hand side of the GitHub UI.
    Choose the **settings** button in the dropdown menu.
 
-    ![settings-button](/atlas-docs/images/github-settings.png)
+    ![settings-button](/docs/atlas-docs/images/github-settings.png)
 
 1. Click the **developer settings** option in the far bottom of the left navbar.
 
-    ![dev-settings](/atlas-docs/images/github-developer-settings.png)
+    ![dev-settings](/docs/atlas-docs/images/github-developer-settings.png)
 
 1. Click the **Fine-grained tokens** option in the left navbar.
 
-    ![fine-grained-access-tokens](/atlas-docs/images/github-personal-access-tokens.png)
+    ![fine-grained-access-tokens](/docs/atlas-docs/images/github-personal-access-tokens.png)
 
 1. **Name your token** (_e.g._, "Atlas access token") and optionally give it a description.
    Set the **expiration date**, noting that if the token is short-lived, Atlas will be unable to fulfill requests after it expires.
 
-    ![name-access-token](/atlas-docs/images/github-access-token-name.png)
+    ![name-access-token](/docs/atlas-docs/images/github-access-token-name.png)
 
 1. Specify the following scopes:
 
@@ -62,7 +62,7 @@ Having a dedicated GitHub account for this purpose has several advantages over t
     1. **Repository access** should be set to **All repositories.**
     1. Set **Read and write access** for **all permissions.**
 
-    ![permissions](/atlas-docs/images/github-permissions.png)
+    ![permissions](/docs/atlas-docs/images/github-permissions.png)
 
 ## Add GitHub Integration to Atlas
 
@@ -165,7 +165,7 @@ If the integration is working, you should see a JSON object representing your Gi
 [gh-gql-api]: https://docs.github.com/en/graphql
 [personal-access-tokens]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 [gh-org-owner]: https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization#organization-owners
-[http-adapter]: /atlas-docs/integrations/http-and-rest-apis.md
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[http-adapter]: /docs/atlas-docs/integrations/http-and-rest-apis.md
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/
 [gh-saml-sso]: https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on

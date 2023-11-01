@@ -11,10 +11,6 @@ In this guide, we will configure Atlas to:
 -   Allow users to sign in once, using a central Identity Provider (IdP) like Auth0 or Okta
 -   Authenticate and proxy requests to an arbitrary HTTP API (in this case the GitHub API)
 
-## Prerequisites
-
--   Install `mom` CLI via the [`mom` reference docs][mom-cli-reference]
-
 ## Step 0: Log in to the Moment service
 
 To log in to the Moment service, run `mom auth login`.
@@ -136,9 +132,9 @@ Follow-up items:
 
 Congratulations! You have successfully set up Atlas to securely access your internal resources. With Atlas, you can streamline your development process and improve the security of your data and infrastructure. If you encounter any issues or have questions, refer to the Atlas documentation or reach out to the Atlas community for support.
 
-[mom-cli-reference]: /atlas-docs/Installations/mom-cli-reference.md
-[mom-gh]: /atlas-docs/integrations/github.md
-[integrations]: /atlas-docs/integrations/README.md
-[install-guides]: /atlas-docs/Installations/
-[install-guides-kube-kustomize]: /atlas-docs/Installations/kubernetes.md
-[install-guides-ecs-pulumi]: /atlas-docs/Installations/ecs.md
+[mom-cli-reference]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[mom-gh]: /docs/atlas-docs/integrations/github.md
+[integrations]: /docs/atlas-docs/integrations/README.md
+[install-guides]: /docs/atlas-docs/Installations/
+[install-guides-kube-kustomize]: /docs/atlas-docs/Installations/kubernetes.md
+[install-guides-ecs-pulumi]: /docs/atlas-docs/Installations/ecs.md

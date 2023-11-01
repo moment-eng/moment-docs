@@ -25,28 +25,28 @@ At the end of this guide, your running instance of Atlas will be configured to:
 1.  Click your profile picture in the upper right-hand side of the Brex UI.
     Choose the **settings** button in the dropdown menu.
 
-    ![settings-button](/atlas-docs/images/brex-settings.png)
+    ![settings-button](/docs/atlas-docs/images/brex-settings.png)
 
 1.  Click the **Developer** tab.
 
-    ![api-tokens-tab](/atlas-docs/images/brex-developer-settings.png)
+    ![api-tokens-tab](/docs/atlas-docs/images/brex-developer-settings.png)
 
 1.  Click the **Create Token**.
 
-    ![api-tokens-tab](/atlas-docs/images/brex-create-token.png)
+    ![api-tokens-tab](/docs/atlas-docs/images/brex-create-token.png)
 
 1.  Provide a name for the Brex API token, and select the permissions you want to grant.
 
-    ![api-tokens-tab](/atlas-docs/images/brex-token-permissions.png)
+    ![api-tokens-tab](/docs/atlas-docs/images/brex-token-permissions.png)
 
 1.  Click the **Allow Access** button.
 
-    ![api-tokens-tab](/atlas-docs/images/brex-confirm-create.png)
+    ![api-tokens-tab](/docs/atlas-docs/images/brex-confirm-create.png)
 
 1.  Click the **Copy** button to copy the API token to your clipboard.
     You will need this token to configure Atlas in the next step.
 
-    ![api-tokens-tab](/atlas-docs/images/brex-copy-token.png)
+    ![api-tokens-tab](/docs/atlas-docs/images/brex-copy-token.png)
 
 ## Add Brex Integration to Atlas
 
@@ -139,5 +139,5 @@ If the integration is working, you should see a JSON object with a list of Brex 
 [brex-api]: https://developer.brex.com/
 [brex-admin]: https://www.brex.com/support/what-are-the-various-brex-role-types
 [api-tokens]: https://developer.brex.com/atlas-docs/authentication/
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/

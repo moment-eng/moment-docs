@@ -26,27 +26,27 @@ At the end of this guide, your running instance of Atlas will be configured to:
 1. Click the gear-shaped **configure icon** in the upper right-hand side of the Greenhouse UI.
    Choose the **Dev Center** option in the bottom left corner of the page.
 
-    ![settings-button](/atlas-docs/images/greenhouse-settings.png)
+    ![settings-button](/docs/atlas-docs/images/greenhouse-settings.png)
 
 1. Click the **API Credential Management** link.
 
-    ![dev-settings](/atlas-docs/images/greenhouse-api-cred-mgmt.png)
+    ![dev-settings](/docs/atlas-docs/images/greenhouse-api-cred-mgmt.png)
 
 1. Click the **Create New API Key** button.
 
-    ![fine-grained-access-tokens](/atlas-docs/images/greenhouse-create-api-key-button.png)
+    ![fine-grained-access-tokens](/docs/atlas-docs/images/greenhouse-create-api-key-button.png)
 
 1. Set **API Type** to **Harvest API**, **Partner** to **Custom**, and write a description of what you expect the key to do.
 
-    ![api-type](/atlas-docs/images/greenhouse-create-new-cred.png)
+    ![api-type](/docs/atlas-docs/images/greenhouse-create-new-cred.png)
 
 1. **Copy** the API key and click **I have stored the API key**.
 
-    ![name-access-token](/atlas-docs/images/greenhouse-copy-save-key.png)
+    ![name-access-token](/docs/atlas-docs/images/greenhouse-copy-save-key.png)
 
 1. Specify permissions.
 
-    ![permissions](/atlas-docs/images/greenhouse-set-permissions.png)
+    ![permissions](/docs/atlas-docs/images/greenhouse-set-permissions.png)
 
 ## Add Greenhouse Harvest API Integration to Atlas
 
@@ -162,6 +162,6 @@ If the integration is working, you should see a JSON object representing your Gi
 [gh-rest-api]: https://developers.greenhouse.io/harvest.html?shell#introduction
 [api-token]: https://developers.greenhouse.io/harvest.html?shell#authentication
 [gh-admin]: https://support.greenhouse.io/hc/en-us/sections/360001198631-Admin-guideroles-in-an-organization#organization-owners
-[http-adapter]: /atlas-docs/integrations/http-and-rest-apis.md
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[http-adapter]: /docs/atlas-docs/integrations/http-and-rest-apis.md
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/

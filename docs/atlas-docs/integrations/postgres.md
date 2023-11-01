@@ -116,4 +116,4 @@ If the integration is working, you should see a JSON representation of your quer
 
 The Postgres adapter currently supports CRUD `operation` types of `select`, `insert`, `update`, and `delete`.
 
-[install-guides]: /atlas-docs/Installations/
+[install-guides]: /docs/atlas-docs/Installations/

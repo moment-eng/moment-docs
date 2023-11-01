@@ -200,5 +200,5 @@ If the integration is working, you should see a JSON object with a list of Argo 
 [api-tokens]: https://argo-cd.readthedocs.io/en/latest/user-guide/commands/argocd_account_generate-token/
 [cli]: https://argo-cd.readthedocs.io/en/stable/user-guide/commands/argocd/
 [argo-create-user]: https://argo-cd.readthedocs.io/en/stable/operator-manual/user-management/#create-new-user
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/

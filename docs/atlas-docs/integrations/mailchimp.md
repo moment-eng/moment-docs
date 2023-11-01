@@ -26,25 +26,25 @@ At the end of this guide, your running instance of Atlas will be configured to:
 1.  Click your profile picture in the lower left-hand side of the Mailchimp UI.
     Choose the **profile** button in the dropdown menu.
 
-    ![profile-button](/atlas-docs/images/mailchimp-user-menu.png)
+    ![profile-button](/docs/atlas-docs/images/mailchimp-user-menu.png)
 
 1.  Click **Extra > API keys.**
 
-    ![settings-button](/atlas-docs/images/mailchimp-profile.png)
+    ![settings-button](/docs/atlas-docs/images/mailchimp-profile.png)
 
 1.  Click the **Create New Key** button.
 
-    ![create-key-button](/atlas-docs/images/mailchimp-api-keys.png)
+    ![create-key-button](/docs/atlas-docs/images/mailchimp-api-keys.png)
 
 1.  Provide a name for the Mailchimp API key, and click **Generate Key**.
 
-    ![create-key-button](/atlas-docs/images/mailchimp-generate-key.png)
+    ![create-key-button](/docs/atlas-docs/images/mailchimp-generate-key.png)
 
 1.  Click the **Copy To Clipboard** button to copy the API key to your clipboard.
     Then click **Done**.
     You will need this key to configure Atlas in the next step.
 
-    ![copy-key-button](/atlas-docs/images/mailchimp-copy-api-key.png)
+    ![copy-key-button](/docs/atlas-docs/images/mailchimp-copy-api-key.png)
 
 ## Add Mailchimp Integration to Atlas
 
@@ -144,6 +144,6 @@ If the integration is working, you should see a JSON object with a general summa
 [mc-api]: https://mailchimp.com/developer/marketing/api/
 [mc-roles]: https://mailchimp.com/help/manage-user-levels-in-your-account/
 [mc-api-keys-docs]: https://mailchimp.com/help/about-api-keys/
-[http-adapter]: /atlas-docs/integrations/http-and-rest-apis.md
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[http-adapter]: /docs/atlas-docs/integrations/http-and-rest-apis.md
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/

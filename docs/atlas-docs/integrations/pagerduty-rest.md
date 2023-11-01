@@ -44,19 +44,19 @@ We can do this by following these steps:
 1. Go to the PagerDuty [**API Access Keys**][api-access-keys] page.
    Click the **Create New API Key** button.
 
-    ![api-access-keys-create](/atlas-docs/images/pagerduty-api-access-keys-create.png)
+    ![api-access-keys-create](/docs/atlas-docs/images/pagerduty-api-access-keys-create.png)
 
 1. Provide a name for the PagerDuty API access key.
    Choose whether to make the API access key read-only.
    Click **Create Key**.
 
-    ![api-access-keys-create](/atlas-docs/images/pagerduty-api-access-keys-create-modal.png)
+    ![api-access-keys-create](/docs/atlas-docs/images/pagerduty-api-access-keys-create-modal.png)
 
 1. Provide a name for the PagerDuty API access key.
    Choose whether to make the API access key read-only.
    Click **Create Key**.
 
-    ![api-access-keys-create](/atlas-docs/images/pagerduty-api-access-keys-created.png)
+    ![api-access-keys-create](/docs/atlas-docs/images/pagerduty-api-access-keys-created.png)
 
 ## Add PagerDuty Integration to Atlas
 
@@ -166,6 +166,6 @@ If the integration is working, you should see a JSON object representing your Pa
 [service-region]: https://support.pagerduty.com/docs/service-regions
 [roles]: https://www.pagerduty.com/resources/learn/user-roles-permissions/
 [pagerduty-events]: ./pagerduty-events.md
-[http-adapter]: /atlas-docs/integrations/http-and-rest-apis.md
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[http-adapter]: /docs/atlas-docs/integrations/http-and-rest-apis.md
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/

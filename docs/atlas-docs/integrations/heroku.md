@@ -43,26 +43,26 @@ Having a dedicated Heroku account for this purpose has several advantages over t
 1.  Click your profile picture in the upper right-hand side of the Heroku UI.
     Choose the **Settings** button in the dropdown menu.
 
-    ![settings-button](/atlas-docs/images/heroku-settings.png)
+    ![settings-button](/docs/atlas-docs/images/heroku-settings.png)
 
 1.  Click the **Applications** tab in settings page.
 
-    ![tokens-tab](/atlas-docs/images/heroku-settings-applications.png)
+    ![tokens-tab](/docs/atlas-docs/images/heroku-settings-applications.png)
 
 1.  Click the **Create Authorization** button.
 
-    ![create-token](/atlas-docs/images/heroku-create-authorization.png)
+    ![create-token](/docs/atlas-docs/images/heroku-create-authorization.png)
 
 1.  Fill out the form to create a new Heroku OAuth Authorization Token and click the **Create** button.
     The **Description** field is not optional.
     (For instance, you might write `Atlas canvas token` or `Atlas - <your-team-name>`.)
 
-    ![create-token-form](/atlas-docs/images/heroku-confirm-create-authorization.png)
+    ![create-token-form](/docs/atlas-docs/images/heroku-confirm-create-authorization.png)
 
 1.  Copy the **OAuth Authorization** value.
     You will use this value in the next step, to configure Atlas to authenticate against the Heroku API.
 
-    ![copy-token](/atlas-docs/images/heroku-copy-authorization.png)
+    ![copy-token](/docs/atlas-docs/images/heroku-copy-authorization.png)
 
 ## Add Heroku Integration to Atlas
 
@@ -167,6 +167,6 @@ If the integration is working, you should see a JSON object representing your He
 [heroku-api]: https://devcenter.heroku.com/articles/platform-api-reference
 [oauth-authorizations]: https://devcenter.heroku.com/articles/oauth
 [heroku-team-admin]: https://devcenter.heroku.com/articles/heroku-teams#managing-permissions
-[http-adapter]: /atlas-docs/integrations/http-and-rest-apis.md
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[http-adapter]: /docs/atlas-docs/integrations/http-and-rest-apis.md
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/

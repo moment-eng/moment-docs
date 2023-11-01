@@ -27,7 +27,7 @@ install
 ```
 
 We reference a `staging` cluster here.
-Make sure to copy the atlas.yml you generated locally (in [Getting Started](/atlas-docs/getting-started.md)) to `kubernetes/overlays/staging/atlas.yml`.
+Make sure to copy the atlas.yml you generated locally (in [Getting Started](/docs/atlas-docs/getting-started.md)) to `kubernetes/overlays/staging/atlas.yml`.
 If your environment uses a different name, rename the `kubernetes/overlays/staging` directory to use your environment name.
 
 ## Kustomize configuration
@@ -38,7 +38,7 @@ These files are used to define Atlas and Envoy configurations.
 
 #### Adding integrations for third-party APIs
 
-Please refer to the docs in [atlas-docs/integrations][integrations] for a full list of integrations
+Please refer to the docs in [docs/atlas-docs/integrations][integrations] for a full list of integrations
 and how to use them.
 
 Many integrations require credentials. To deploy these to Kubernetes, use the file
@@ -52,7 +52,7 @@ AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
 ```
 
-To provision these access tokens, see the docs in [atlas-docs/integrations][integrations] for the integration you'd like to enable.
+To provision these access tokens, see the docs in [docs/atlas-docs/integrations][integrations] for the integration you'd like to enable.
 
 Once you add the tokens you'd like to use, Atlas will automatically discover them and enable the relavant integrations.
 
@@ -87,4 +87,4 @@ const res = await atlasProxyFetch("/v1alpha1/instances");
 return res.json();
 ```
 
-[integrations]: /atlas-docs/integrations
+[integrations]: /docs/atlas-docs/integrations

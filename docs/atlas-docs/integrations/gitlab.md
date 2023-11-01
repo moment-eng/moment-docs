@@ -135,8 +135,8 @@ If the integration is working, you should see a JSON object representing your Gi
 
 [gl-rest-api]: https://docs.gitlab.com/ee/api/rest/
 [gl-gql-api]: https://docs.gitlab.com/ee/api/graphql/
-[http-adapter]: /atlas-docs/integrations/http-and-rest-apis.md
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[http-adapter]: /docs/atlas-docs/integrations/http-and-rest-apis.md
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/
 [personal-access-tokens]: https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html
 [gitlab-token-overview]: https://docs.gitlab.com/ee/security/token_overview.html
