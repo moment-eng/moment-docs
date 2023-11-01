@@ -62,7 +62,7 @@ The docs in `atlas-docs/integrations` contain detailed instructions for using di
 
 ## Install
 
-Apply the configuration onto your Kubernetes cluster in the `atlas` namespace by running [Kustomize](https://kubectl.docs.kubernetes.io/installation/kustomize/)
+Apply the configuration onto your Kubernetes cluster in the `atlas` namespace by running [Kustomize](https://kubectl.docs.kubernetes.io/installation/kustomize/).
 
 ```
 kustomize build ./kubernetes/overlays/staging | kubectl apply -f -

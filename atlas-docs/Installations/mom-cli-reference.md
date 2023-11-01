@@ -1,6 +1,8 @@
 # `mom` Atlas CLI tooling
 
-Moment’s official CLI `mom` has built-in amenities for interacting with Atlas.
+Atlas's recommended setup and configuration is located in [Atlas Config settings](https://app.moment.dev/settings/atlas).
+Moment’s official CLI `mom` has built-in amenities for interacting with Atlas, but it's in the process of being deprecated in favor of the [Atlas configuration](https://app.moment.dev/settings/atlas) in the app.
+
 This document covers the basics of using this CLI: installing, configuring, and using it to interact with Atlas.
 
 ## Prerequisite: mom CLI Installation
@@ -35,19 +37,9 @@ This will open a browser window where you can log in to the Moment service.
 
 ## Configuring Atlas
 
-### Generating basic config with `mom atlas config generate`
+### Adding HTTP API integration
 
-We can use `mom atlas config generate` to generate a simple, initial configuration of Atlas.
-Initially this configuration will do nothing, but we will add to it later.
-
-```sh
-mom atlas config generate \
-    --name my-atlas \       # This can be anything, but should be unique to your organization.
-    --preset production \   # Configures Atlas to connect to gateway at `atlas.moment.dev`.
-    > atlas.yml
-```
-
-### Adding HTTP API integration with `mom atlas config add-http-adapter`
+**Generate [Atlas configuration](https://app.moment.dev/settings/atlas) in the app instead of using mom**
 
 Atlas provides [integrations][integrations] for several popular HTTP APIs.
 Integrating Atlas with those APIs generally requires provisioning API credentials, configuring Atlas to use them, and then deploying Atlas, _e.g._, to ECS or Kubernetes.
