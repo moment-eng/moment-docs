@@ -57,6 +57,18 @@ After making some edits, press the Run cell button or press `shift` + `return
 
 If you run a cell, it updates not only that cell, but any cell that depends on it. You can use the code editor to hack *any* code cell in Moment.
 
+#### Deeper Dive on Imports
+
+In the code editor, you may see the components like `CountdownTimerAlpha`. This is a React component we’ve created in our [standard library](https://app.moment.dev/@moment/stdlib). You can edit any of the properties either in the code editor or in the inspect tab.
+
+![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/7ea330ba-9333-4207-821c-7051ce52e877.png)
+
+Where is `CountdownTimerAlpha` coming from? If you search the canvas, you'll see an import code cell that looks like the line below was added automatically when you selected the Countdown Timer component from the component tab (see below).
+
+`import { DataGridAlphaV2, ButtonAlpha, CountdownTimerAlpha, InputSelectAlpha } from "@moment/stdlib"`
+
+If you click on @moment/stdlib at the end of the import line, it will open the [Standard Components canvas](https://app.moment.dev/@moment/stdlib) (or Stdlib). You can find more about this component on the [Countdown Timer](https://app.moment.dev/@moment/stdlib/countdown-timer) page.
+
 ### Properties Pane
 
 The properties pane lives on the right side of the canvas and is accessible with the buttons shown below.
