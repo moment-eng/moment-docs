@@ -42,11 +42,11 @@ Having a dedicated Vercel account for this purpose has several advantages over t
 1.  Click your profile picture in the upper right-hand side of the Vercel UI.
     Choose the **Settings** button in the dropdown menu.
 
-    ![settings-button](/atlas-docs/images/vercel-settings.png)
+    ![settings-button](/docs/atlas-docs/images/vercel-settings.png)
 
 1.  Click the **Tokens** tab in the left-hand side of the page.
 
-    ![tokens-tab](/atlas-docs/images/vercel-settings-sidebar.png)
+    ![tokens-tab](/docs/atlas-docs/images/vercel-settings-sidebar.png)
 
 1.  Fill out the form to generate a new token.
 
@@ -55,12 +55,12 @@ Having a dedicated Vercel account for this purpose has several advantages over t
     -   Set an expiration date for the token. Note that when the token expires, everything using it will break.
     -   Click the **create** button.
 
-    ![generate-token](/atlas-docs/images/vercel-create-token.png)
+    ![generate-token](/docs/atlas-docs/images/vercel-create-token.png)
 
 1.  Click the **copy** button to copy the token to your clipboard.
     Store this token in a secure location, as you will need it in the next step.
 
-    ![copy-token](/atlas-docs/images/vercel-token-copy.png)
+    ![copy-token](/docs/atlas-docs/images/vercel-token-copy.png)
 
 ## Add Vercel Integration to Atlas
 
@@ -159,6 +159,6 @@ If the integration is working, you should see a JSON object representing your Ve
 [vercel-api]: https://vercel.com/docs/rest-api
 [vercel-team-owner]: https://vercel.com/docs/teams-and-accounts/team-members-and-roles#owner-role
 [access-tokens-docs]: https://vercel.com/docs/rest-api#introduction/api-basics/authentication
-[http-adapter]: /atlas-docs/integrations/http-and-rest-apis.md
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[http-adapter]: /docs/atlas-docs/integrations/http-and-rest-apis.md
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/

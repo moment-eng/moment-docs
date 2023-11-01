@@ -11,7 +11,7 @@ You'll need to:
 
 ## Add a new HTTP adapter
 
-You can use the [`mom` CLI](/atlas-docs/install/mom-cli-reference.md) to add new HTTP adapters to the Atlas configuration.
+You can use the [`mom` CLI](/docs/atlas-docs/install/mom-cli-reference.md) to add new HTTP adapters to the Atlas configuration.
 Run this command, changing
 
 -   `YOUR_ATLAS_CONFIG.yml` with the path to your Atlas configuration file
@@ -35,7 +35,7 @@ mom atlas config add-http-adapter \
     --base-url https://api.github.com \
     -H 'Authorization: token ${{ GITHUB_TOKEN }}'
 ```
-where `my_atlas.yml` is the yaml file you configured in [Getting Started](/atlas-docs/getting-started.md) and `GITHUB_TOKEN` is saved as an environment variable. The last row might look slightly different depending on the type of token.
+where `my_atlas.yml` is the yaml file you configured in [Getting Started](/docs/atlas-docs/getting-started.md) and `GITHUB_TOKEN` is saved as an environment variable. The last row might look slightly different depending on the type of token.
 
 You should be able to check `my_atlas.yml` (or whatever you name your Atlas YAML) for the configuration.
 
@@ -43,7 +43,7 @@ Any value inside a set of `${{ dollar-and-double-curly-braces }}` will be read a
 
 ## Apply your Kustomize overlay to your Kubernetes cluster
 
-Follow the instructions in [our installation guide](/atlas-docs/install/kubernetes.md) to apply the Kustomize overlay that you've just modified.
+Follow the instructions in [our installation guide](/docs/atlas-docs/install/kubernetes.md) to apply the Kustomize overlay that you've just modified.
 
 ## Testing your adapter
 

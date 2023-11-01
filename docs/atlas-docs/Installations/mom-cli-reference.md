@@ -91,5 +91,5 @@ We can run an instance of Atlas locally using `mom atlas run`:
 mom atlas run -f atlas-staging.yml
 ```
 
-[integrations]: /atlas-docs/integrations
-[install-guides]: /atlas-docs/Installations
+[integrations]: /docs/atlas-docs/integrations
+[install-guides]: /docs/atlas-docs/Installations

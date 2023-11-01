@@ -26,26 +26,26 @@ At the end of this guide, your running instance of Atlas will be configured to:
 1.  Click your profile picture in the upper right-hand side of the OpenAI UI.
     Choose the **View API Keys** button in the dropdown menu.
 
-    ![settings-button](/atlas-docs/images/openai-settings.png)
+    ![settings-button](/docs/atlas-docs/images/openai-settings.png)
 
 1.  Click the **Create new secret key** button.
 
-    ![api-tokens-tab](/atlas-docs/images/openai-api-keys.png)
+    ![api-tokens-tab](/docs/atlas-docs/images/openai-api-keys.png)
 
 1.  Input a description for the API key, and click the **Create secret key** button.
 
-    ![api-tokens-tab](/atlas-docs/images/openapi-create-new-api-key.png)
+    ![api-tokens-tab](/docs/atlas-docs/images/openapi-create-new-api-key.png)
 
 1.  Copy the API key to your clipboard and save it.
 
-    ![api-tokens-tab](/atlas-docs/images/openai-copy-new-api-key.png)
+    ![api-tokens-tab](/docs/atlas-docs/images/openai-copy-new-api-key.png)
 
 ## [Optional] Get ID of OpenAI Organization you'd like to use, if you have more than one
 
 If you have more than one OpenAI Organization, you will need to specify which one to use.
 The OpenAI Organization ID is in the [Organization settings][org-settings] page.
 
-![org-settings](/atlas-docs/images/openai-org-id.png)
+![org-settings](/docs/atlas-docs/images/openai-org-id.png)
 
 ## Add OpenAI Integration to Atlas
 
@@ -163,6 +163,6 @@ The API will likely time out, so try bumping the Envoy timeout (`connect_timeout
 [api-tokens]: https://platform.openai.com/atlas-docs/api-reference/authentication
 [orgs]: https://platform.openai.com/atlas-docs/guides/production-best-practices/setting-up-your-organization
 [org-settings]: https://platform.openai.com/account/org-settings
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/
 [envoy-config]: /config/envoy/envoy.yml

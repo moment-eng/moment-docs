@@ -13,7 +13,7 @@ Moment is a UI toolkit for infrastructure and platform engineers to quickly buil
 - **Release management tooling** with a ChatGPT summary of the release notes and embedded Datadog charts for monitoring
 - **Service and Resource Catalogs** to help everyone in your org understand who owns what
 
-Moment is powered by Atlas, an authenticating proxy for seamlessly accessing your most sensitive APIs in a canvas. Learn more about Atlas in the [Atlas docs](https://docs.moment.dev/moment-docs/atlas-docs).
+Moment is powered by Atlas, an authenticating proxy for seamlessly accessing your most sensitive APIs in a canvas. Learn more about Atlas in the [Atlas docs](https://docs.moment.dev/moment-docs/docs/atlas-docs).
 
 ## What is a Canvas?
 

@@ -30,28 +30,28 @@ The steps to do this are as follows:
 
 1.  From the [Stripe dashboard][stripe-dashboard] click the **Developers** button in the top-right corner.
 
-    ![settings-button](/atlas-docs/images/stripe-developers.png)
+    ![settings-button](/docs/atlas-docs/images/stripe-developers.png)
 
 1.  Choose the **API keys** tab.
 
-    ![api-keys-tab](/atlas-docs/images/stripe-api-keys.png)
+    ![api-keys-tab](/docs/atlas-docs/images/stripe-api-keys.png)
 
 1.  Click the **Create restricted key** button.
 
-    ![create-restricted-api-key](/atlas-docs/images/stripe-restricted-keys.png)
+    ![create-restricted-api-key](/docs/atlas-docs/images/stripe-restricted-keys.png)
 
 1.  Name the key, and select the permissions you want to grant.
 
-    ![api-keys-tab](/atlas-docs/images/stripe-name-and-permissions.png)
+    ![api-keys-tab](/docs/atlas-docs/images/stripe-name-and-permissions.png)
 
 1.  When you're done, click the **Create key** button in the bottom left corner.
 
-    ![create-key-button](/atlas-docs/images/stripe-create-key.png)
+    ![create-key-button](/docs/atlas-docs/images/stripe-create-key.png)
 
 1.  Copy the key and save it somewhere safe.
     You will need it in the next step to configure Atlas to proxy requests to the Stripe API.
 
-    ![copy-key](/atlas-docs/images/stripe-copy-key.png)
+    ![copy-key](/docs/atlas-docs/images/stripe-copy-key.png)
 
 ## Add Stripe Integration to Atlas
 
@@ -152,6 +152,6 @@ If the integration is working, you should see a JSON object with a list of Strip
 [api-keys]: https://stripe.com/docs/keys
 [restricted-api-keys]: https://stripe.com/docs/keys#limit-access
 [stripe-dashboard]: https://dashboard.stripe.com/dashboard
-[http-adapter]: /atlas-docs/integrations/http-and-rest-apis.md
-[mom]: /atlas-docs/Installations/mom-cli-reference.md
-[install-guides]: /atlas-docs/Installations/
+[http-adapter]: /docs/atlas-docs/integrations/http-and-rest-apis.md
+[mom]: /docs/atlas-docs/Installations/mom-cli-reference.md
+[install-guides]: /docs/atlas-docs/Installations/
