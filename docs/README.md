@@ -43,6 +43,10 @@ Code cells can also reference each other. We’ve included a dependency graph in
 
 ![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/2770ac6a-6ad6-45a2-ac13-693e1c570a18.png)
 
+You can also copy a cell and edit it below:
+
+![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/5c90fba0-f710-4937-b543-1f7de9a10295.png)
+
 ### Code Editor
 
 The code editor allows you to edit the underlying code for any code cell.
