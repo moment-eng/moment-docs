@@ -53,4 +53,4 @@ return res.json();
 You can find your cluster ID by running `kubectl get ns default -o jsonpath='{.metadata.uid}'`.
 
 [kapi]: https://kubernetes.io/docs/reference/generated/kubernetes-api/
-[install]: docs/atlas-docs/Installations/kubernetes.md
+[install]: kubernetes.md
