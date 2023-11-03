@@ -11,11 +11,13 @@ In this guide, we will configure Atlas to:
 * Allow users to sign in once, using a central Identity Provider (IdP) like Auth0 or Okta
 * Authenticate and proxy requests to an arbitrary HTTP API (in this case the GitHub API)
 
-## Step 0: Log in to the Moment service
+## Atlas Configuration UI
 
-Follow the steps in Atlas Configuration located at [https://app.moment.dev/settings/atlas](https://app.moment.dev/settings/atlas).
+To configure all the APIs you want to use in Moment, follow the steps in Atlas Configuration located at [https://app.moment.dev/settings/atlas](https://app.moment.dev/settings/atlas).
 
 {% @arcade/embed flowId="cOOFT2tljlZ9qy6qvorG" url="https://app.arcade.software/share/cOOFT2tljlZ9qy6qvorG" %}
+
+## Step 0: Log in to the Moment service
 
 If you need to log in to the Moment service using the `mom` CLI, run `mom auth login`. This will open a browser window where you can log in to the Moment service. Be sure to use your organization's Identity Provider (IdP) to log in. (_e.g._, Google, GitHub).
 
