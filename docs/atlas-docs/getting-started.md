@@ -8,14 +8,16 @@ This specifically includes third-party APIs (_e.g._, GitHub, PagerDuty), private
 
 In this guide, we will configure Atlas to:
 
--   Allow users to sign in once, using a central Identity Provider (IdP) like Auth0 or Okta
--   Authenticate and proxy requests to an arbitrary HTTP API (in this case the GitHub API)
+* Allow users to sign in once, using a central Identity Provider (IdP) like Auth0 or Okta
+* Authenticate and proxy requests to an arbitrary HTTP API (in this case the GitHub API)
 
 ## Step 0: Log in to the Moment service
 
-To log in to the Moment service, run `mom auth login`.
-This will open a browser window where you can log in to the Moment service.
-Be sure to use your organization's Identity Provider (IdP) to log in. (_e.g._, Google, GitHub).
+Follow the steps in Atlas Configuration located at [https://app.moment.dev/settings/atlas](https://app.moment.dev/settings/atlas).
+
+{% @arcade/embed flowId="cOOFT2tljlZ9qy6qvorG" url="https://app.arcade.software/share/cOOFT2tljlZ9qy6qvorG" %}
+
+If you need to log in to the Moment service using the `mom` CLI, run `mom auth login`. This will open a browser window where you can log in to the Moment service. Be sure to use your organization's Identity Provider (IdP) to log in. (_e.g._, Google, GitHub).
 
 ```sh
 mom auth login
@@ -23,8 +25,7 @@ mom auth login
 
 ## Step 1: Generate a basic Atlas configuration
 
-We can use `mom atlas config generate` to generate a simple, initial configuration of Atlas.
-Initially this configuration will do nothing, but we will add to it later.
+We can use `mom atlas config generate` to generate a simple, initial configuration of Atlas. Initially this configuration will do nothing, but we will add to it later.
 
 ```sh
 # --name:  Any human-readable name, unique to your organization.
@@ -37,12 +38,12 @@ mom atlas config generate \
 
 ## Step 2: Provision a GitHub Personal Access Token
 
-Atlas provides [integrations][integrations] for several popular HTTP APIs.
+Atlas provides [integrations](integrations/) for several popular HTTP APIs.
 
-If you have not done this already, use the **Provision a GitHub Personal Access Token** section of the [integration guide for the GitHub API][mom-gh] to:
+If you have not done this already, use the **Provision a GitHub Personal Access Token** section of the [integration guide for the GitHub API](integrations/github.md) to:
 
 1. Provision a GitHub Personal Access Token, and
-1. Populate the `GITHUB_TOKEN` environment variable with the API token
+2. Populate the `GITHUB_TOKEN` environment variable with the API token
 
 ## Step 3: Configure Atlas to proxy traffic to the GitHub API
 
@@ -62,8 +63,7 @@ Now that we have a GitHub Personal Access Token, configure Atlas to proxy traffi
 
 ## Step 4: Test the integration locally
 
-First, use `mom atlas run` to start Atlas locally and connect to the gateway at `atlas.moment.dev`.
-This will configure your locally-running Atlas instance to receive traffic from `atlas.moment.dev` and proxy traffic to third-party APIs (in this case, `api.github.com`).
+First, use `mom atlas run` to start Atlas locally and connect to the gateway at `atlas.moment.dev`. This will configure your locally-running Atlas instance to receive traffic from `atlas.moment.dev` and proxy traffic to third-party APIs (in this case, `api.github.com`).
 
 ```sh
 $ mom atlas run -f atlas.yml  # Your Atlas config file
@@ -72,8 +72,7 @@ $ mom atlas run -f atlas.yml  # Your Atlas config file
 <... many logs will go here ...>
 ```
 
-At this point, `atlas.moment.dev` is now configured to proxy traffic to your local machine.
-We can verify this by running `mom curl`:
+At this point, `atlas.moment.dev` is now configured to proxy traffic to your local machine. We can verify this by running `mom curl`:
 
 ```sh
 # Returns the authenticated user's profile as a JSON object.
@@ -91,8 +90,7 @@ $ mom atlas instances list
  c6a3fdd7-9e74-4fcd-bba3-1b9639f68e91  my-eks-atlas  https://atlas.moment.dev  example.com     7  Auth0
 ```
 
-You can also check which APIs Atlas is set up to proxy traffic to using `mom atlas apis list`.
-If you have set up many integrations using our [integrations guide][integrations], you may see something like this:
+You can also check which APIs Atlas is set up to proxy traffic to using `mom atlas apis list`. If you have set up many integrations using our [integrations guide](integrations/), you may see something like this:
 
 ```sh
 $ mom atlas apis list -u https://atlas.moment.dev
@@ -111,12 +109,10 @@ $ mom atlas apis list -u https://atlas.moment.dev
 
 ## Step 6: Install Atlas in your cloud environment
 
-Once we verify this proxy works locally, we need to install it in your cloud environment.
-Atlas has [installation guides][install-guides] for several types of cloud deployment.
-Notably:
+Once we verify this proxy works locally, we need to install it in your cloud environment. Atlas has [installation guides](Installations/) for several types of cloud deployment. Notably:
 
--   [Kubernetes via Kustomize][install-guides-kube-kustomize].
--   [ECS via Pulumi][install-guides-ecs-pulumi].
+* [Kubernetes via Kustomize](Installations/kubernetes.md).
+* [ECS via Pulumi](Installations/ecs.md).
 
 ## Step 7: Develop Your Custom Tools and Dashboards
 
@@ -124,17 +120,9 @@ Now that Atlas is up and running, you can start building custom command-line too
 
 Follow-up items:
 
--   Consult the [integration docs][integrations] to set up integrations with other APIs.
--   Integration docs generally have code available that you can copy into Moment canvases.
-    For example, GitHub's code is in the last section of its [integration guide][mom-gh].
+* Consult the [integration docs](integrations/) to set up integrations with other APIs.
+* Integration docs generally have code available that you can copy into Moment canvases. For example, GitHub's code is in the last section of its [integration guide](integrations/github.md).
 
 ## Conclusion
 
 Congratulations! You have successfully set up Atlas to securely access your internal resources. With Atlas, you can streamline your development process and improve the security of your data and infrastructure. If you encounter any issues or have questions, refer to the Atlas documentation or reach out to the Atlas community for support.
-
-[mom-cli-reference]: /docs/atlas-docs/Installations/mom-cli-reference.md
-[mom-gh]: /docs/atlas-docs/integrations/github.md
-[integrations]: /docs/atlas-docs/integrations/README.md
-[install-guides]: /docs/atlas-docs/Installations/
-[install-guides-kube-kustomize]: /docs/atlas-docs/Installations/kubernetes.md
-[install-guides-ecs-pulumi]: /docs/atlas-docs/Installations/ecs.md

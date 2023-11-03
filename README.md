@@ -8,10 +8,10 @@ We recommend you check out https://app.moment.dev and try out our onboarding can
 
 Moment is a UI toolkit for infrastructure and platform engineers to quickly build self-serve tools. The options are endless, but here are a few of our favorite use cases that increase shipping velocity:
 
-- **Interactive, action-oriented runbooks** to replace out-of-date docs and copy pasted CLI commands
-- **Cost management tools** for dissecting Kubernetes and non-Kubernetes infrastructure usage and spend by different unit economics specific to your business
-- **Release management tooling** with a ChatGPT summary of the release notes and embedded Datadog charts for monitoring
-- **Service and Resource Catalogs** to help everyone in your org understand who owns what
+* **Interactive, action-oriented runbooks** to replace out-of-date docs and copy pasted CLI commands
+* **Cost management tools** for dissecting Kubernetes and non-Kubernetes infrastructure usage and spend by different unit economics specific to your business
+* **Release management tooling** with a ChatGPT summary of the release notes and embedded Datadog charts for monitoring
+* **Service and Resource Catalogs** to help everyone in your org understand who owns what
 
 Moment is powered by Atlas, an authenticating proxy for seamlessly accessing your most sensitive APIs in a canvas. Learn more about Atlas in the [Atlas docs](https://docs.moment.dev/moment-docs/docs/atlas-docs).
 
@@ -23,7 +23,7 @@ First, let’s walk through the different parts of the canvas.
 
 ### Cells
 
-Canvases are made up **cells**, which are the primary building block. There are 2 types of cells: **rich text cells** and **code cells**.
+Canvases are made up **cells**, which are the primary building block. There are 2 types of cells: **rich text cells** and **code cells**.
 
 #### Rich Text Cells
 
@@ -51,15 +51,15 @@ You can also copy a cell and edit it below:
 
 The code editor allows you to edit the underlying code for any code cell.
 
-Select any code cell, and click the Toggle code editor icon in the blue bar. Shockingly, this button will toggle the code editor.
+Select any code cell, and click the Toggle code editor icon in the blue bar. Shockingly, this button will toggle the code editor.
 
 ![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/e5f592ba-11dd-4a1b-929f-f85a2965608a.png)
 
-After making some edits, press the Run cell button or press `shift` + `return`.
+After making some edits, press the Run cell button or press `shift` + `return`.
 
 ![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/ee8f364d-0020-4d61-96b9-89d7f66e60ea.png)
 
-If you run a cell, it updates not only that cell, but any cell that depends on it. You can use the code editor to hack *any* code cell in Moment.
+If you run a cell, it updates not only that cell, but any cell that depends on it. You can use the code editor to hack _any_ code cell in Moment.
 
 #### Deeper Dive on Imports
 
@@ -67,11 +67,11 @@ In the code editor, you may see the components like `CountdownTimerAlpha`. This 
 
 ![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/7ea330ba-9333-4207-821c-7051ce52e877.png)
 
-Where is `CountdownTimerAlpha` coming from? If you search the canvas, you'll see an import code cell that looks like the line below was added automatically when you selected the Countdown Timer component from the component tab (see below).
+Where is `CountdownTimerAlpha` coming from? If you search the canvas, you'll see an import code cell that looks like the line below was added automatically when you selected the Countdown Timer component from the component tab (see below).
 
 `import { DataGridAlphaV2, ButtonAlpha, CountdownTimerAlpha, InputSelectAlpha } from "@moment/stdlib"`
 
-If you click on @moment/stdlib at the end of the import line, it will open the [Standard Components canvas](https://app.moment.dev/@moment/stdlib) (or Stdlib). You can find more about this component on the [Countdown Timer](https://app.moment.dev/@moment/stdlib/countdown-timer) page.
+If you click on @moment/stdlib at the end of the import line, it will open the [Standard Components canvas](https://app.moment.dev/@moment/stdlib) (or Stdlib). You can find more about this component on the [Countdown Timer](https://app.moment.dev/@moment/stdlib/countdown-timer) page.
 
 ### Properties Pane
 
@@ -83,7 +83,7 @@ The properties pane lives on the right side of the canvas and is accessible with
 
 The components tab has a list of code templates you can use in your canvases.
 
-Start by toggling the components tab, or pressing `ctrl/⌘` + `p`. Once you insert a component (either by pressing return or dragging it into the canvas), it creates a fully editable copy that you can change in the code editor. Some templates also include a import cell, which can be placed anywhere in the document—order doesn’t matter like it typically does in code. Import cells often show up at the bottom of the canvas as you add components, but you can move them up and down the page.
+Start by toggling the components tab, or pressing `ctrl/⌘` + `p`. Once you insert a component (either by pressing return or dragging it into the canvas), it creates a fully editable copy that you can change in the code editor. Some templates also include a import cell, which can be placed anywhere in the document—order doesn’t matter like it typically does in code. Import cells often show up at the bottom of the canvas as you add components, but you can move them up and down the page.
 
 ![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/abbed90c-1bfb-4de9-955d-8d218e1c8b54.png)
 
@@ -93,13 +93,13 @@ Some components also have properties that are editable in a UI instead of a code
 
 ![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/b096e1e9-02e7-4aa9-b6bf-67ed4e7f84d7.png)
 
-If the code editor and inspect tab are both open and you change a property in the inspect tab, you'll notice how the changes are synced in all three locations.
+If the code editor and inspect tab are both open and you change a property in the inspect tab, you'll notice how the changes are synced in all three locations.
 
 ![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/8ece5b07-45c1-4a29-9fcd-9757b7f28249.png)
 
 ### Comments Tab
 
-You can easily add comments to any cell in a canvas to collaborate with colleagues. Highlight text or select a code cell, and click the Add Comment button to leave a comment.
+You can easily add comments to any cell in a canvas to collaborate with colleagues. Highlight text or select a code cell, and click the Add Comment button to leave a comment.
 
 ![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/8d568434-11f5-44e7-9a12-46a71a55f11d.png)
 
@@ -107,7 +107,7 @@ You can easily add comments to any cell in a canvas to collaborate with colleagu
 
 Changes you make in a Moment canvas are saved regularly as drafts. You can see yours and other people’s drafts in the history tab.
 
-Pressing the Save button creates an official numbered version of the canvas, which you can go back to at any point.
+Pressing the Save button creates an official numbered version of the canvas, which you can go back to at any point.
 
 ![](https://moment-canvas-user-uploads-west2.s3.us-west-2.amazonaws.com/5e4f2b1c-246f-4a00-a38a-68e9cb54d833.png)
 
