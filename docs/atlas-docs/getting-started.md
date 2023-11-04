@@ -18,12 +18,15 @@ To configure all the API adapters you want to use in Moment, follow the steps in
 {% @arcade/embed flowId="cOOFT2tljlZ9qy6qvorG" url="https://app.arcade.software/share/cOOFT2tljlZ9qy6qvorG" %}
 
 Following these steps should accomplish the following:
+
 * Set up Atlas in Kubernetes or ECS
 * Provision API keys for the adapters you'd like to use
 * Configure a config for all the API adapters you'd like to use in Moment
 * Copy and apply your Atlas configuration
 
-## [OLD] Steps for setting up Atlas using mom CLI
+{% @arcade/embed flowId="rtKt64rsMukDowl23WjU" url="https://app.arcade.software/share/rtKt64rsMukDowl23WjU" %}
+
+## \[OLD] Steps for setting up Atlas using mom CLI
 
 ### Step 0: Log in to the Moment service
 
