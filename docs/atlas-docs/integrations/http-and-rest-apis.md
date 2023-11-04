@@ -11,7 +11,7 @@ You'll need to:
 
 ## Add a new HTTP adapter
 
-You can use the [`mom` CLI](/docs/atlas-docs/install/mom-cli-reference.md) to add new HTTP adapters to the Atlas configuration.
+You can use the [`mom` CLI](/docs/atlas-docs/Installations/mom-cli-reference.md) to add new HTTP adapters to the Atlas configuration.
 Run this command, changing
 
 -   `YOUR_ATLAS_CONFIG.yml` with the path to your Atlas configuration file
@@ -43,7 +43,7 @@ Any value inside a set of `${{ dollar-and-double-curly-braces }}` will be read a
 
 ## Apply your Kustomize overlay to your Kubernetes cluster
 
-Follow the instructions in [our installation guide](/docs/atlas-docs/install/kubernetes.md) to apply the Kustomize overlay that you've just modified.
+Follow the instructions in [our installation guide](/docs/atlas-docs/Installations/kubernetes.md) to apply the Kustomize overlay that you've just modified.
 
 ## Testing your adapter
 
