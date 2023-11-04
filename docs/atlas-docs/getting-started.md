@@ -13,11 +13,19 @@ In this guide, we will configure Atlas to:
 
 ## Atlas Configuration UI
 
-To configure all the APIs you want to use in Moment, follow the steps in Atlas Configuration located at [https://app.moment.dev/settings/atlas](https://app.moment.dev/settings/atlas).
+To configure all the API adapters you want to use in Moment, follow the steps in Atlas Configuration located at [https://app.moment.dev/settings/atlas](https://app.moment.dev/settings/atlas).
 
 {% @arcade/embed flowId="cOOFT2tljlZ9qy6qvorG" url="https://app.arcade.software/share/cOOFT2tljlZ9qy6qvorG" %}
 
-## Step 0: Log in to the Moment service
+Following these steps should accomplish the following:
+* Set up Atlas in Kubernetes or ECS
+* Provision API keys for the adapters you'd like to use
+* Configure a config for all the API adapters you'd like to use in Moment
+* Copy and apply your Atlas configuration
+
+## [OLD] Steps for setting up Atlas using mom CLI
+
+### Step 0: Log in to the Moment service
 
 If you need to log in to the Moment service using the `mom` CLI, run `mom auth login`. This will open a browser window where you can log in to the Moment service. Be sure to use your organization's Identity Provider (IdP) to log in. (_e.g._, Google, GitHub).
 
@@ -25,7 +33,7 @@ If you need to log in to the Moment service using the `mom` CLI, run `mom auth l
 mom auth login
 ```
 
-## Step 1: Generate a basic Atlas configuration
+### Step 1: Generate a basic Atlas configuration
 
 We can use `mom atlas config generate` to generate a simple, initial configuration of Atlas. Initially this configuration will do nothing, but we will add to it later.
 
@@ -38,7 +46,7 @@ mom atlas config generate \
     > atlas.yml
 ```
 
-## Step 2: Provision a GitHub Personal Access Token
+### Step 2: Provision a GitHub Personal Access Token
 
 Atlas provides [integrations](integrations/) for several popular HTTP APIs.
 
@@ -47,7 +55,7 @@ If you have not done this already, use the **Provision a GitHub Personal Access 
 1. Provision a GitHub Personal Access Token, and
 2. Populate the `GITHUB_TOKEN` environment variable with the API token
 
-## Step 3: Configure Atlas to proxy traffic to the GitHub API
+### Step 3: Configure Atlas to proxy traffic to the GitHub API
 
 Now that we have a GitHub Personal Access Token, configure Atlas to proxy traffic to the GitHub API using `mom atlas config add-http-adapter`:
 
@@ -63,7 +71,7 @@ Now that we have a GitHub Personal Access Token, configure Atlas to proxy traffi
     -H 'Authorization: token ${{ GITHUB_TOKEN }}'
 ```
 
-## Step 4: Test the integration locally
+### Step 4: Test the integration locally
 
 First, use `mom atlas run` to start Atlas locally and connect to the gateway at `atlas.moment.dev`. This will configure your locally-running Atlas instance to receive traffic from `atlas.moment.dev` and proxy traffic to third-party APIs (in this case, `api.github.com`).
 
@@ -81,7 +89,7 @@ At this point, `atlas.moment.dev` is now configured to proxy traffic to your loc
 mom curl /v1/apis/http/github/user
 ```
 
-## Step 5: Check that Atlas is running and accessible
+### Step 5: Check that Atlas is running and accessible
 
 Check that your Atlas instance is running using `mom atlas instances list`.
 
@@ -109,14 +117,14 @@ $ mom atlas apis list -u https://atlas.moment.dev
  Moment  moment  moment-ecs-follower  070e9fcc-ffcb-4ced-b118-6731b67a0a4b
 ```
 
-## Step 6: Install Atlas in your cloud environment
+### Step 6: Install Atlas in your cloud environment
 
 Once we verify this proxy works locally, we need to install it in your cloud environment. Atlas has [installation guides](Installations/) for several types of cloud deployment. Notably:
 
 * [Kubernetes via Kustomize](Installations/kubernetes.md).
 * [ECS via Pulumi](Installations/ecs.md).
 
-## Step 7: Develop Your Custom Tools and Dashboards
+## Develop Your Custom Tools and Dashboards
 
 Now that Atlas is up and running, you can start building custom command-line tools, web portals, data views, and dashboards to interact with your resources. You can also expose infrastructure commands like deployment and rollback to your developers without granting wide access to your infrastructure.
 
