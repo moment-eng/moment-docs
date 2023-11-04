@@ -1,8 +1,13 @@
 apiVersion: moment.dev/atlas/v1alpha1
 kind: Atlas
 metadata:
-  name: gcp-dev
+  name: atlas-dev
 spec:
+  apiAdapters:
+  - adapterRef:
+      apiVersion: moment.dev/adapters/v1alpha1
+      kind: Kubernetes
+      name: kubernetes  
   exposedPorts: {}
   gatewayRegistration:
     backoff:
