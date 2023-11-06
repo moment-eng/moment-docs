@@ -1,6 +1,6 @@
 # Getting Started
 
-Atlas is an authenticating proxy.
+Atlas is an authenticating proxy for managing your most sensitive APIs in Moment.
 
 It is designed to help engineering teams develop safe, secure internal tools, even when they have to rely on a variety of APIs that have no uniform notion of authentication, identity, security, or authorization.
 
@@ -13,20 +13,22 @@ In this guide, we will configure Atlas to:
 
 ## Atlas Configuration UI
 
-To configure all the API adapters you want to use in Moment, follow the steps in Atlas Configuration located at [https://app.moment.dev/settings/atlas](https://app.moment.dev/settings/atlas).
+To configure all the API adapters you want to use in Moment, follow the steps in Atlas Configuration located at [https://app.moment.dev/settings/atlas](https://app.moment.dev/settings/atlas). If everything is set up properly, Atlas Configuration should display the control plane information!
 
 {% @arcade/embed flowId="cOOFT2tljlZ9qy6qvorG" url="https://app.arcade.software/share/cOOFT2tljlZ9qy6qvorG" %}
 
-Following these steps should accomplish the following:
+_Following these steps should accomplish the following_:
 
 * Set up Atlas in Kubernetes or ECS
 * Provision API keys for the adapters you'd like to use
 * Configure a config for all the API adapters you'd like to use in Moment
 * Copy and apply your Atlas configuration
 
+You can also update, delete, and add new adapters (see below). Note that you cannot add [secrets](../../kubernetes/overlays/staging/.env.atlas-integration-tokens) through the control plane at this time and need to redeploy your Atlas follower with your [secret](../../kubernetes/overlays/staging/.env.atlas-integration-tokens) in the environment variable. That said, you can reference any of your [secrets](../../kubernetes/overlays/staging/.env.atlas-integration-tokens) in the control plane when setting up the adapter.
+
 {% @arcade/embed flowId="rtKt64rsMukDowl23WjU" url="https://app.arcade.software/share/rtKt64rsMukDowl23WjU" %}
 
-## \[OLD] Steps for setting up Atlas using mom CLI
+## Steps for monitoring Atlas using mom CLI
 
 ### Step 0: Log in to the Moment service
 
@@ -34,19 +36,6 @@ If you need to log in to the Moment service using the `mom` CLI, run `mom auth l
 
 ```sh
 mom auth login
-```
-
-### Step 1: Generate a basic Atlas configuration
-
-We can use `mom atlas config generate` to generate a simple, initial configuration of Atlas. Initially this configuration will do nothing, but we will add to it later.
-
-```sh
-# --name:  Any human-readable name, unique to your organization.
-# --preset production: Configures Atlas to connect to gateway at `atlas.moment.dev`.
-mom atlas config generate \
-    --name my-atlas \
-    --preset production \
-    > atlas.yml
 ```
 
 ### Step 2: Provision a GitHub Personal Access Token
@@ -58,34 +47,11 @@ If you have not done this already, use the **Provision a GitHub Personal Access 
 1. Provision a GitHub Personal Access Token, and
 2. Populate the `GITHUB_TOKEN` environment variable with the API token
 
-### Step 3: Configure Atlas to proxy traffic to the GitHub API
+### Step 4: Test your integration locally
 
-Now that we have a GitHub Personal Access Token, configure Atlas to proxy traffic to the GitHub API using `mom atlas config add-http-adapter`:
+First, use `mom atlas run` to start Atlas locally and connect to the gateway at `atlas.moment.dev`. This will configure your locally-running Atlas instance to receive traffic from `atlas.moment.dev` and proxy traffic to third-party APIs (in this example, `api.github.com`).
 
-```sh
-# -f:             The Atlas config file to modify.
-# --adapter-name: Can be anything, but must be unique to this config.
-# --base-url:     URL to proxy traffic to.
-# -H:             `Authorization` header to add to all requests.
- mom atlas config add-http-adapter \
-    -f atlas.yml \
-    --adapter-name github \
-    --base-url https://api.github.com \
-    -H 'Authorization: token ${{ GITHUB_TOKEN }}'
-```
-
-### Step 4: Test the integration locally
-
-First, use `mom atlas run` to start Atlas locally and connect to the gateway at `atlas.moment.dev`. This will configure your locally-running Atlas instance to receive traffic from `atlas.moment.dev` and proxy traffic to third-party APIs (in this case, `api.github.com`).
-
-```sh
-$ mom atlas run -f atlas.yml  # Your Atlas config file
-✨ Connecting to gateway at dns:atlas.moment.dev:443
-
-<... many logs will go here ...>
-```
-
-At this point, `atlas.moment.dev` is now configured to proxy traffic to your local machine. We can verify this by running `mom curl`:
+If `atlas.moment.dev` is configured to proxy traffic to your local machine, we can verify this by running `mom curl`:
 
 ```sh
 # Returns the authenticated user's profile as a JSON object.
