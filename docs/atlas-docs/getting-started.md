@@ -38,7 +38,7 @@ If you need to log in to the Moment service using the `mom` CLI, run `mom auth l
 mom auth login
 ```
 
-### Step 2: Provision a GitHub Personal Access Token
+### Step 1: Provision a GitHub Personal Access Token
 
 Atlas provides [integrations](integrations/) for several popular HTTP APIs.
 
@@ -47,7 +47,7 @@ If you have not done this already, use the **Provision a GitHub Personal Access 
 1. Provision a GitHub Personal Access Token, and
 2. Populate the `GITHUB_TOKEN` environment variable with the API token
 
-### Step 4: Test your integration locally
+### Step 2: Test your integration locally
 
 First, use `mom atlas run` to start Atlas locally and connect to the gateway at `atlas.moment.dev`. This will configure your locally-running Atlas instance to receive traffic from `atlas.moment.dev` and proxy traffic to third-party APIs (in this example, `api.github.com`).
 
@@ -58,7 +58,7 @@ If `atlas.moment.dev` is configured to proxy traffic to your local machine, we c
 mom curl /v1/apis/http/github/user
 ```
 
-### Step 5: Check that Atlas is running and accessible
+### Step 3: Check that Atlas is running and accessible
 
 Check that your Atlas instance is running using `mom atlas instances list`.
 
@@ -86,7 +86,7 @@ $ mom atlas apis list -u https://atlas.moment.dev
  Moment  moment  moment-ecs-follower  070e9fcc-ffcb-4ced-b118-6731b67a0a4b
 ```
 
-### Step 6: Install Atlas in your cloud environment
+### Step 4: Install Atlas in your cloud environment
 
 Once we verify this proxy works locally, we need to install it in your cloud environment. Atlas has [installation guides](Installations/) for several types of cloud deployment. Notably:
 
