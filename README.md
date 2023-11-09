@@ -2,7 +2,7 @@
 
 ## Prefer doing instead of reading?
 
-We recommend you check out https://app.moment.dev and try out our onboarding canvas.
+We recommend you check out [https://app.moment.dev](https://app.moment.dev) and try out our onboarding canvas.
 
 ## What is Moment?
 
