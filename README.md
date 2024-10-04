@@ -1,9 +1,5 @@
 # Moment Overview
 
-## Prefer doing instead of reading?
-
-We recommend you check out [https://app.moment.dev](https://app.moment.dev) and try out our onboarding canvas.
-
 ## What is Moment?
 
 Moment is a UI toolkit for infrastructure and platform engineers to quickly build self-serve tools. The options are endless, but here are a few of our favorite use cases that increase shipping velocity:
